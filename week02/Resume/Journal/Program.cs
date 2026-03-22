@@ -1,4 +1,9 @@
 using System;
+// Creativity / Exceeding Requirements:
+// I exceeded the core requirements by adding an optional "mood" field to each Entry.
+// After the user writes their response, the program asks "How did you feel today?" 
+// and saves/displays the mood. I also added 5 extra prompts to the PromptGenerator.
+// This addresses the problem of users not knowing how they felt that day.
 
 class Program
 {

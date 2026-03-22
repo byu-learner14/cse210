@@ -31,8 +31,8 @@ public class Journal
         {
             foreach (Entry entry in _entries)
             {
-              // Use | as separator
-                writer.WriteLine($"{entry._date}|{entry._promptText}|{entry._entryText}|{entry._mood}");
+                // Use ~|~ as separator (unlikely to appear in text)
+                writer.WriteLine($"{entry._date}~|~{entry._promptText}~|~{entry._entryText}~|~{entry._mood}");
             }
         }
     }
