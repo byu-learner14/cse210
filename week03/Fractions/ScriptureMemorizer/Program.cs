@@ -2,6 +2,15 @@
 // PROGRAM.CS
 // =============================================
 
+// Creativity / Exceeding Requirements:
+// I exceeded the core requirements in these ways:
+// 1. Built a library of 5 different scriptures (including single-verse and verse-range examples)
+//    and randomly select one each time the program runs.
+// 2. Hide only words that are still visible (never re-hide already hidden words).
+// 3. Hide a random number of words (1-5) each time instead of a fixed amount.
+// 4. The program automatically ends after the final fully-hidden display with a congratulatory message.
+// This helps users practice memorization more effectively by giving variety and smarter hiding logic.
+
 using System;
 using System.Collections.Generic;
 
