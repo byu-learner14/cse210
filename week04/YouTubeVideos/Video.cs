@@ -4,7 +4,7 @@ public class Video
 {
     public string Title { get; set; }
     public string Author { get; set; }
-    public int Length { get; set; }   // Length in seconds
+    public int Length { get; set; }   // length in seconds
 
     // Private list so only the Video class manages its comments
     private List<Comment> _comments = new List<Comment>();
