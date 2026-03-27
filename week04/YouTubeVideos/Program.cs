@@ -45,7 +45,7 @@ class Program
         video3.AddComment(new Comment("Jack", "Thanks!"));
         videos.Add(video3);
 
-        // === Video 4 (optional — you can delete this block if you want exactly 3 videos) ===
+        // === Video 4 (optional — you can delete this block if needed for 3 videos only) ===
         Video video4 = new Video
         {
             Title = "YouTube Video Tracker Demo",
