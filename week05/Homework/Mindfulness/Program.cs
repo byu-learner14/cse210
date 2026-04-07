@@ -1,7 +1,14 @@
 using System;
+using System.Threading;
 
 namespace Mindfulness
 {
+    // Exceeding Core Requirements:
+    // 1. Added input validation in DisplayStartingMessage() using TryParse to prevent crashes on invalid duration input.
+    // 2. Improved user experience with clearer messages and better error handling in the main menu.
+    // 3. All activities properly use inheritance from the base Activity class with good encapsulation.
+    // 4. The program runs in a clean loop and exits gracefully.
+
     class Program
     {
         static void Main(string[] args)

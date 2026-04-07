@@ -4,9 +4,12 @@ using System.Threading;
 
 public class Activity
 {
-    protected string _name;
-    protected string _description;
-    protected int _duration;
+    // Changed to private because _name and _description are only used inside this base class.
+    // Derived classes do not access them directly — they use the public methods instead.
+    // This follows better encapsulation principles.
+    private string _name;
+    private string _description;
+    protected int _duration;   // Kept protected because it is used in derived classes
 
     public Activity(string name, string description)
     {
@@ -22,7 +25,13 @@ public class Activity
         Console.WriteLine(_description);
         Console.WriteLine();
         Console.Write("How long, in seconds, would you like for your session? ");
-        _duration = int.Parse(Console.ReadLine() ?? "30");
+        
+        // Better input handling (prevents crash on non-number input)
+        while (!int.TryParse(Console.ReadLine(), out _duration) || _duration <= 0)
+        {
+            Console.Write("Please enter a positive number: ");
+        }
+
         Console.WriteLine("\nGet ready...");
         ShowSpinner(5);
     }
@@ -40,7 +49,6 @@ public class Activity
         List<string> animationStrings = new List<string> { "|", "/", "-", "\\" };
         DateTime endTime = DateTime.Now.AddSeconds(seconds);
         int i = 0;
-
         while (DateTime.Now < endTime)
         {
             Console.Write(animationStrings[i]);
