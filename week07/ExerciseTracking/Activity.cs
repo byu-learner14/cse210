@@ -1,3 +1,5 @@
+using System;   // < Add this line at the top
+
 public abstract class Activity
 {
     private readonly DateTime _date;
@@ -12,12 +14,10 @@ public abstract class Activity
     public string GetDate() => _date.ToString("dd MMM yyyy");
     public int GetLength() => _length;
 
-    // These are declared but Not implemented in the base class
     public abstract double GetDistance();
     public abstract double GetSpeed();
     public abstract double GetPace();
 
-    // This method lives in the base class and works for All activities
     public virtual string GetSummary()
     {
         return $"{GetDate()} {GetType().Name} ({GetLength()} min)- " +
