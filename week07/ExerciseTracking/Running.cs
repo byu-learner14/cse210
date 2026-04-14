@@ -1,3 +1,5 @@
+using System;
+
 public class Running : Activity
 {
     private readonly double _distance; // Miles

@@ -1,3 +1,5 @@
+using System;
+
 public class Cycling : Activity
 {
     private readonly double _speed; // mph
