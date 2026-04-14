@@ -1,22 +1,14 @@
 using System;
 using System.Collections.Generic;
 
-class Program
+var activities = new List<Activity>
 {
-    static void Main()
-    {
-        // Create at least one of each activity (exactly as the assignment requires)
-        var activities = new List<Activity>
-        {
-            new Running(new DateTime(2022, 11, 3), 30, 3.0),      // Matches sample
-            new Cycling(new DateTime(2022, 11, 3), 30, 12.0),     // Nice round numbers
-            new Swimming(new DateTime(2022, 11, 3), 30, 20)       // Example lap swim
-        };
+    new Running(new DateTime(2022, 11, 3), 30, 3.0),
+    new Cycling(new DateTime(2022, 11, 3), 30, 12.0),
+    new Swimming(new DateTime(2022, 11, 3), 30, 20)
+};
 
-        // Display summary for every activity in the list (polymorphism in action!)
-        foreach (var activity in activities)
-        {
-            Console.WriteLine(activity.GetSummary());
-        }
-    }
+foreach (var activity in activities)
+{
+    Console.WriteLine(activity.GetSummary());
 }
